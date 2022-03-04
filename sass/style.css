@@ -1,0 +1,114 @@
+:root {
+  --primaryBGColor: #EAF4F4;
+  --secondaryBGColor: #CCE3DE;
+}
+html,
+body {
+  margin: 0;
+  text-align: justify;
+  background-color: #FAEFEB;
+}
+
+.Datecontainer {
+  margin: 0 auto;
+  width: 80%;
+}
+.Datecontainer .TextRed {
+  color: red;
+}
+.Datecontainer .TextCenter {
+  text-align: center;
+  margin: 1rem auto;
+}
+.Datecontainer .TextLeft {
+  width: 65%;
+  margin: 1rem auto;
+}
+.Datecontainer .logo {
+  display: block;
+  margin: 0 auto;
+  width:16%;
+}
+.Datecontainer .BGL{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 0;
+}
+.Datecontainer .BGR{
+  position: absolute;
+  top:0;
+  right:0;
+  z-index: 0;
+}
+.Datecontainer .orderTable {
+  margin: 1rem auto;
+}
+.Datecontainer .orderTable h2 {
+  display: block;
+  text-align: center;
+}
+.Datecontainer .orderTable table {
+  background-color: #ffff;
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 65%;
+}
+.Datecontainer .orderTable td, .Datecontainer .orderTable th {
+  border: 1px solid var(--secondaryBGColor);
+  text-align: left;
+  padding: 0 8px;
+  height: 3rem;
+}
+.Datecontainer .orderTable tr:nth-child(even) {
+  background-color: var(--primaryBGColor);
+}
+.Datecontainer .inputDate {
+  display: none;
+  position: relative;
+}
+.Datecontainer .inputDate #search {
+  display: none;
+}
+.Datecontainer .inputDate .changeDate {
+  background: #FFF;
+  width: 50%;
+  position: absolute;
+  left: 23.5%;
+  padding: 1rem;
+  border: 2px solid var(--secondaryBGColor);
+  text-align: center;
+  margin-top: -25rem;
+}
+.Datecontainer .inputDate .changeDate #Adjust_shippingDate {
+  margin-top: 1rem;
+}
+.Datecontainer .inputDate #cancel {
+  width: 20px;
+  position: absolute;
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .Datecontainer .TextLeft {
+    width: 100%;
+  }
+  .Datecontainer .orderTable table {
+    width: 100%;
+  }
+  .Datecontainer .inputDate .changeDate {
+    width: 80%;
+    left: 4%;
+  }
+  .Datecontainer .logo {
+    width:50%;
+  }
+  .Datecontainer .BGL{
+    width:30%;
+  }
+  .Datecontainer .BGR{
+    width:30%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
