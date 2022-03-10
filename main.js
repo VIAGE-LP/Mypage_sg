@@ -504,11 +504,12 @@ function addMyPage() {
 function addStatus(status, delivery_status) {
   document.getElementById("status_title").innerHTML = SETTING_STAUTS;
   document.getElementById("status").innerHTML = SETTING_STAUTS_TEXT[status];
-
-  if (status == 900) {
+  
+  if(status==900){
+    var url = addParma(delivery_status, '.asp', 'txtMainid');
     document.getElementById("delivery_status_title").innerHTML = SETTING_STAUTS_DELIVERY;
-    document.getElementById("delivery_status").innerHTML = '<a href="' + delivery_status + '">' + delivery_status + '</a>'
-  } else {
+    document.getElementById("delivery_status").innerHTML = '<a href="' + url + '">' + url +'</a>'
+  }else{
     removeElement('delivery_status_title')
   }
 }
@@ -521,4 +522,13 @@ function removeElement(element) {
   var rmElement = document.getElementById(element).parentNode.parentNode.parentNode;
   var rm = document.getElementById(element).parentNode.parentNode;
   rmElement.removeChild(rm);
+}
+
+function addParma(statusURL, splitString, parma){
+  if(statusURL.indexOf(parma) == -1){
+    var url = statusURL.split(splitString)[0] + splitString + '?' + parma + '=' + statusURL.split(splitString)[1];
+    return url
+  }else{
+    return statusURL
+  }
 }
